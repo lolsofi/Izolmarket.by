@@ -1,0 +1,92 @@
+	// start .sProducts
+.sProducts {
+		 
+	.section-title{
+		display: flex;
+		align-items: baseline;
+		h2{
+			font-weight: bold;
+			line-height: (50 / 37);
+			margin-right: 7px;
+		}
+
+		span{
+			font-size: 30px;
+			line-height: (41 / 30);
+			font-weight: bold;
+			color: #BEBEBE;
+		}
+	}
+
+	&__item{
+		background: $white;
+		border: 1px solid $primary;
+		border-radius: 5px;
+		padding: 7px 34px 47px 4px;
+		.row{
+			--bs-gutter-x: 14px;
+		}
+	}
+
+	&__slider-wrap{
+		position: relative;
+	}
+
+	.swiper-slide{
+		width: 370px;
+		margin-right: 30px;
+		height: 100%;
+	}
+
+	&__text-block{
+		margin-top: 39px;
+	}
+
+	&__title{
+		font-weight: 600;
+		font-size: 20px;
+		line-height: (27 / 20);
+		color: #919191;
+		margin-bottom: 26px;
+	}
+
+	&__price{
+		font-weight: 600;
+		font-size: 24px;
+		line-height: (33 / 24);
+		color: #5A5A5A;
+		margin-bottom: 30px;
+	}
+
+	&__btn{
+		@extend .btn;
+		padding: 10px 25px;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: (27 / 20);
+		.icon{
+			width: 20px;
+			height: 20px;
+			margin-right: 10px;
+		}
+	}
+
+	.icon{
+		stroke: $primary;
+		fill: transparent;
+	}
+
+
+	
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sProducts

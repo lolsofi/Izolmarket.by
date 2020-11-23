@@ -1,0 +1,37 @@
+	// start .sAdvantages
+.sAdvantages {
+		 
+	&__item{
+		display: flex;
+		margin-bottom: 35px;
+	}
+
+	&__img-wrap{
+		margin-right: 28px;
+	}
+
+	&__title{
+		font-weight: bold;
+		font-size: 22px;
+		line-height: (30 / 22);
+		margin-bottom: 20px;
+	}
+
+	&__text{
+		// font-size: 22px;
+		line-height: (30 / 22);
+	}
+
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sAdvantages

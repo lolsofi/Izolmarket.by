@@ -312,6 +312,41 @@ function eventHandler() {
 			document.body.classList.remove('loaded_hiding');
 		}, 500);
 	};
+
+	$('.sProducts').each(function () {
+		var reviewSlider = new Swiper($(this).find('.sProducts__slider--js'), {
+			spaceBetween: 30,
+			slidesPerView: 1,
+			// grabCursor: true,
+			// centeredSlides: true,
+			//breakpoints
+			breakpoints: {
+				//lg
+				992: {
+					slidesPerView: 3
+				},
+				768: {
+					slidesPerView: 2
+				}
+			},
+			loop: true,
+			//lazy
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 2
+			},
+			//nav
+			navigation: {
+				nextEl: $(this).find('.swiper-button-next'),
+				prevEl: $(this).find('.swiper-button-prev')
+			},
+			//pugination
+			pagination: {
+				el: $(this).find('.swiper-pagination'),
+				clickable: true
+			}
+		}); // rangle sliders for main page
+	});
 }
 
 ;
