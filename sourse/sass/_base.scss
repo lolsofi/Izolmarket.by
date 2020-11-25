@@ -269,28 +269,30 @@ ul {
 .swiper-button-hand {
 	width: var(--swiperArrowSize);
 	height: var(--swiperArrowSize);
-	border-radius: 50%;
-	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
+	// border-radius: 50%;
+	// background-color: var(--swiperBgDef);
+	// border: 2px solid var(--swiperBorderColorDef);
 	color: var(--swiperColorDef);
-	@include bgs;
+	// @include bgs;
 	z-index: 300;
 	outline: none !important;
 	// margin-bottom: 0;
 	background-image: none;
 	margin: 0;
 	@include a-cent(y);
-	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1); 
+	// box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1); 
 	@include mt;
 
 	&:hover {
-		background-color: var(--swiperBgDefHover);
-		border-color: var(--swiperBorderColorDefHover);
+		// background-color: var(--swiperBgDefHover);
+		// border-color: var(--swiperBorderColorDefHover);
 		color: var(--swiperColorDefHover);
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(44);
+		stroke: $primary;
+		fill: transparent;
 	}
 
 	&::after {
@@ -317,11 +319,14 @@ ul {
 	justify-content: center;
 	align-items: center;
 	position: relative !important;
-
 	&-bullet {
 		opacity: 1;
-		width: 16px !important;
-		height: 16px !important;
+		@include media-breakpoint-up(sm){
+			width: 16px !important;
+			height: 16px !important;
+		}
+		width: 10px !important;
+		height: 10px !important;
 		border-radius: 50%;
 		background-color: #E4E4E4 !important;
 		opacity: 1 !important;
@@ -333,7 +338,42 @@ ul {
 
 		&-active,
 		&:hover {
-			background-color: #B6B6B6 !important;
+			background-color: $primary !important;
+		}
+	}
+}
+
+.headerBlock{
+	.swiper-pagination {
+		width: 100%;
+		// text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative !important;
+		bottom: rem(19) !important;
+		&-bullet {
+			opacity: 1;
+			@include media-breakpoint-up(sm){
+				width: 9px !important;
+				height: 9px !important;
+			}
+			width: 5px !important;
+			height: 5px !important;
+			border-radius: 50%;
+			// background-color: #E4E4E4 !important;
+			background: rgba(228, 225, 225, 0.86);
+			opacity: 1 !important;
+			outline: none !important;
+			@include mt;
+			margin-left: rem(3);
+			// padding-right: rem(8);
+			margin-right: rem(3);
+
+			&-active,
+			&:hover {
+				background-color: $white !important;
+			}
 		}
 	}
 }

@@ -12,21 +12,26 @@ mixin sProducts(title,type)
 				+arrow
 				+e.slider--js.swiper-container
 					.swiper-wrapper
-						+reviewSlide()
-						+reviewSlide()
-						+reviewSlide()
+						+productSlide()
+						+productSlide()
+						+productSlide()
 				.swiper-pagination
 
 
-mixin reviewSlide()
+mixin productSlide()
 	+e.slide.swiper-slide
 		+e.item
 			.row
 				.col-auto
-					img.swiper-lazy(src="#" data-src=`img/@2x/image-blocks.jpg`, alt="")
+					a(href="#")
+						img.swiper-lazy(src="#" data-src=`img/@2x/image-blocks.jpg`, alt="")
+					+b.add
+						+e.btn--minus
+						input(type="number" value="1")
+						+e.btn--plus
 				.col
 					+e.DIV.text-block
-						+e.DIV.title Самонивелир Ceresit CN69 25кг
+						+e.DIV.title(href="#") Самонивелир Ceresit CN69 25кг
 						+e.DIV.price от 31.09 р/меш
 						+e.DIV.btn.btn(href="#")
 							+icon('shop')

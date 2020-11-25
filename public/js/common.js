@@ -347,6 +347,25 @@ function eventHandler() {
 			}
 		}); // rangle sliders for main page
 	});
+	var reviewSlider = new Swiper('.headerBlock__slider--js', {
+		spaceBetween: 30,
+		slidesPerView: 1,
+		// grabCursor: true,
+		// centeredSlides: true,
+		//breakpoints
+		loop: true,
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2
+		},
+		//nav
+		//pugination
+		pagination: {
+			el: $('.headerBlock').find('.swiper-pagination'),
+			clickable: true
+		}
+	}); // rangle sliders for main page
 }
 
 ;

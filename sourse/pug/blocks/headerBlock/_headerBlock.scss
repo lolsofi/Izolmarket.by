@@ -1,17 +1,18 @@
 // start .headerBlock
 .headerBlock {
-	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
-	// background-image: url(../img);
-	// background-color: #000000;
 
-	h1 {
-		margin-bottom: 1px;
+	--sPT: 0;
+	--sPB: 0;
+
+	.container{
+		@include media-breakpoint-down(sm){
+			--bs-gutter-x: 0;
+		}
 	}
 
-	h2 {
-		margin-bottom: 1px;
+	img{
+		max-width: 100%;
+		height: auto;
 	}
 
 	@include media-breakpoint-up(xl) {}

@@ -1,18 +1,38 @@
 	// start .sProducts
 .sProducts {
+
+	--sPT: #{rem(30)};
+	@include media-breakpoint-up(sm){
+		--sPB: #{rem(60)};
+	}
+	--sPB: #{rem(37)};
+
+	&-bgWhite{
+		background: #fff;
+	}
 		 
 	.section-title{
 		display: flex;
 		align-items: baseline;
 		h2{
 			font-weight: bold;
-			line-height: (50 / 37);
-			margin-right: 7px;
+			@include media-breakpoint-up(sm){
+				line-height: (50 / 37);
+				font-size: rem(36);
+				margin-right: 0;
+			}
+			font-size: rem(20);
+			line-height: (27 / 20);
+			margin-right: rem(-14);
 		}
 
 		span{
-			font-size: 30px;
-			line-height: (41 / 30);
+			@include media-breakpoint-up(sm){
+				font-size: rem(30);
+				line-height: (41 / 30);
+			}
+			font-size: rem(16);
+			line-height: (22 / 16);
 			font-weight: bold;
 			color: #BEBEBE;
 		}
@@ -21,61 +41,105 @@
 	&__item{
 		background: $white;
 		border: 1px solid $primary;
-		border-radius: 5px;
-		padding: 7px 34px 47px 4px;
-		.row{
-			--bs-gutter-x: 14px;
+		border-radius: rem(5);
+		@include media-breakpoint-up(sm){
+			padding: rem(20) rem(24) rem(47) rem(25);
 		}
+		padding: rem(20) rem(12) rem(19) rem(10);
+		.row{
+			@include media-breakpoint-up(sm){
+				--bs-gutter-x: 12px;
+			}
+			--bs-gutter-x: 2px;
+		}
+	}
+
+	
+	img{
+		max-width: 100%;
+		height: auto;
+		margin-bottom: rem(15);
 	}
 
 	&__slider-wrap{
 		position: relative;
 	}
+	
+	.swiper-container{
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(16);
+		}
+		margin-bottom: rem(10);
+	}
 
 	.swiper-slide{
-		width: 370px;
-		margin-right: 30px;
+		width: rem(370);
+		margin-right: rem(30);
 		height: 100%;
 	}
 
+	.swiper-button-hand{
+		@include media-breakpoint-down(sm){
+			display: none;
+		}
+	}
+
 	&__text-block{
-		margin-top: 39px;
+		margin-top: rem(39);
 	}
 
 	&__title{
+		display: block;
 		font-weight: 600;
-		font-size: 20px;
-		line-height: (27 / 20);
+		@include media-breakpoint-up(sm){
+			font-size: rem(20);
+			line-height: (27 / 20);
+		}
+		font-size: rem(15);
+		line-height: (20 / 15);
 		color: #919191;
-		margin-bottom: 26px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(26);
+		}
+		margin-bottom: rem(20);
 	}
 
 	&__price{
 		font-weight: 600;
-		font-size: 24px;
-		line-height: (33 / 24);
+		@include media-breakpoint-up(md){
+			font-size: rem(24);
+			line-height: (33 / 24);
+		}
+		font-size: rem(19);
+		line-height: (26 / 19);
 		color: #5A5A5A;
-		margin-bottom: 30px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(30);
+		}
+		margin-bottom: rem(23);
 	}
 
 	&__btn{
 		@extend .btn;
-		padding: 10px 25px;
+		@include media-breakpoint-up(lg){
+			padding: rem(10) rem(25);
+		}
+		padding: rem(10) rem(18);
 		font-weight: 600;
-		font-size: 20px;
-		line-height: (27 / 20);
+		@include media-breakpoint-up(lg){
+			font-size: rem(20);
+			line-height: (27 / 20);
+		}
+		font-size: $small;
+		line-height: (19 / 14);
 		.icon{
-			width: 20px;
-			height: 20px;
-			margin-right: 10px;
+			width: rem(20);
+			height: rem(20);
+			margin-right: rem(10);
 		}
 	}
 
-	.icon{
-		stroke: $primary;
-		fill: transparent;
-	}
-
+	
 
 	
 
@@ -90,3 +154,69 @@
 	//
 	@include media-breakpoint-down(xl) {}
 } // end.sProducts
+
+
+.add{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: rem(120);
+	margin-left: auto;
+	margin-right: auto;
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		position: relative;
+		padding: 0;
+		width: rem(22);
+		height: rem(20);
+		flex: 0 0 rem(22);
+		&::before,
+		&::after{
+			content: '';
+			@include a-cent;
+			background-color: currentColor;
+		}
+		&--minus{
+			background: #D2D2D2;
+			border: none;
+			border-radius: 0;
+			&::before{
+				width: rem(7);
+				height: rem(2);
+			}
+			&::after{
+				width: rem(7);
+				height: rem(2);
+			}
+		}
+		&--plus{
+			border-radius: 0;
+			background: #D2D2D2;
+			border: none;
+			&::after{
+				width: rem(2);
+    		height: rem(11);
+			}
+			&::before{
+				width: rem(11);
+    		height: rem(2);
+			}
+		}
+	}
+	input{
+		@extend .form-control;
+		max-width: calc(100% - #{rem(90)});
+		// margin-left: rem(5);
+		// margin-right: rem(5);
+		text-align: center;
+		// min-height: 1px;
+		padding: 0 rem(10);
+		border-radius: 0;
+		font-weight: 600;
+		font-size: rem(14);
+		color: #5A5A5A;
+		background: #E4E4E4;
+		border: none;
+	}
+}
