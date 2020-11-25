@@ -1,16 +1,26 @@
 	// start .sAdvantages
 .sAdvantages {
-		 
-	--sPT: #{rem(70)};
-	--sPB: #{rem(27)};
+	
+	@include media-breakpoint-up(md){
+		--sPT: #{rem(70)};
+		--sPB: #{rem(27)};
+	}
+	--sPT: #{rem(19)};
+	--sPB: 0;
 
 	&__item{
 		display: flex;
-		margin-bottom: rem(35);
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(35);
+		}
+		margin-bottom: rem(10);
 	}
 
 	&__img-wrap{
-		margin-right: rem(28);
+		@include media-breakpoint-up(sm){
+			margin-right: rem(28);
+		}
+		margin-right: rem(13);
 		img{
 			@include media-breakpoint-up(sm){
 				height: rem(77);
@@ -24,10 +34,11 @@
 		@include media-breakpoint-up(sm){
 			font-size: rem(22);
 			line-height: (30 / 22);
+			margin-bottom: rem(20);
 		}
+		margin-bottom: rem(5);
 		font-size: $small;
 		line-height: (19 / 14);
-		margin-bottom: rem(20);
 	}
 
 	&__text{

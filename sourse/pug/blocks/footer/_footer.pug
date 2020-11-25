@@ -1,4 +1,52 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			.row
+				.col-md-4
+					+e.title Контакты
+					ul.contacts
+						li
+							+e.icon-wrap
+								+icon('map-marker')
+							+e.text-block
+								+e.place Офис:
+								+e.address(href="#") РБ, 220113, г. Минск, ул. Я.Коласа, д.73/2, оф.26
+						li
+							+e.icon-wrap
+								+icon('map-marker')
+							+e.text-block
+								+e.place Склад:
+								+e.address(href="#") РБ, г. Минск, ул. Бабушкина, д.8/6
+						li
+							+e.icon-wrap
+								+icon('mobile')
+							+e.text-block
+								+e.tel(href="tel:+375 29 316-55-77") +375 29 316-55-77
+								+e.tel(href="tel:+375 29 316-55-77") +375 29 107-55-77
+
+				.col-md-4.footerBlock
+					+e.title Каталог
+					mixin ul(t)
+						ul.list
+							li: a(href="#")!= t
+					+ul('Теплоизоляция')
+					+ul('Паро-гидро-изоляция')
+					+ul('Битумные материалы')
+					+ul('Сухие строительные смеси')
+					+ul('Древесно-плитные материалы')
+					+ul('Гипсокартон и комплектующие')
+					+ul('Прочие товары')
+					+ul('Метизная продукция')
+					+ul('Кровельные материалы')
+
+
+				.col-md-4
+					+e.title Информация
+					+ul('О магазине')
+					+ul('Оплата')
+					+ul('Доставка')
+					+ul('Политика безопасности')
+					+ul('Оптовикам')
+					+ul('Контакты')
+
+

@@ -2,6 +2,97 @@
 		
 	margin-top: auto;
 
+
+	background: #202020;
+	padding-top: rem(30);
+  padding-bottom: rem(30);
+
+
+	&__title{
+		font-size: $small;
+		font-weight: bold;
+		margin-bottom: rem(15);
+		text-transform: uppercase;
+		color: #898989;
+	}
+
+	ul{
+		list-style-type: none;
+		margin-bottom: 0;
+	}
+
+	li{
+		font-size: rem(13);
+		line-height: (23 / 13);
+	}
+
+	.contacts{
+		li{
+			display: flex;
+		}
+	}
+
+	.list{
+		li{
+			position: relative;
+			padding-left: rem(22);
+			&::before{
+				content: '';
+				position: absolute;
+				top: rem(9);
+				left: 0;
+				width: rem(5);
+				height: rem(5);
+				background-color: #666;
+				border-radius: 50%;
+				text-align: center;
+			}
+		}
+	}
+
+	a{
+		color: #666;
+		&:hover{
+			color: $primary;
+		}
+	}
+	
+	&__tel{
+		display: block;
+	}
+	
+	&__icon-wrap{
+		background: #333;
+		border-radius: 2px;
+		margin-right: rem(10);
+		min-width: rem(35);
+		height: rem(35);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		// margin-bottom: 25px;
+		.icon{
+			font-size: rem(14);
+			color: $white;
+		}
+	}
+
+	&__text-block{
+		margin-bottom: rem(25);
+	}
+
+	.footerBlock{
+		@include media-breakpoint-up(md){
+			margin-bottom: 0;
+		}
+		margin-bottom: rem(20);
+		@include media-breakpoint-down(sm){
+			display: none;
+		}
+	}
+
+
+
 // 
 @include media-breakpoint-up(xl) {}
 
