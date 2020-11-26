@@ -5,6 +5,7 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sAdvantages/_sAdvantages.pug
 include ../blocks/sProducts/_sProducts.pug
+include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
 	- let  mainPage= null
@@ -16,10 +17,10 @@ block pagecontent
 	//- +mob-mnu()
 	//- +header()
 	//- +top-nav()
-	//- +topLine() 
+	//- +topLine()
+	 
 	+headerBlock()
-
-
+	+sCatalog()
 	+sAdvantages()
 	+sProducts('Хиты продаж','HIT')(class="sProducts-bgWhite")
 	+sProducts('Новые поступления','NEW')
