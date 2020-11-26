@@ -24,42 +24,83 @@
 
 		}
 	}
+	&__row{
+			@include media-breakpoint-up(sm){
 
+				display: grid;
+				grid-column-gap: rem(28);
+				grid-row-gap: rem(28);
+			}
+		@include media-breakpoint-up(xl) { 
+			--col: 4;
+		}
+			@include media-breakpoint-up(lg){
+
+				--col: 3;
+			}
+			--col: 2;
+
+		grid-template-columns: repeat(var(--col), 1fr);
+	}
 	&__item{
 		border: 1px solid $primary;
-		border-radius: 4px;
-		margin-bottom: rem(21);
+		border-radius: 4px; 
+		margin-bottom: rem(8);
+		@include media-breakpoint-up(sm){
+			margin-bottom: 0;
+			}
+		&:last-child{
+			grid-row: 1/4; 
+			grid-column: #{var(--col)/calc(var(--col) + 1)};
+		}
+		a{
+			color: $body-color;
+
+		}
 		@include media-breakpoint-up(lg){
-			padding: rem(17) rem(25) rem(7)px rem(13);
+			padding: rem(17) rem(25) rem(7) rem(13);
 		}
 		padding: rem(9) rem(10) rem(12) rem(20);
 		position: relative;
-		@include media-breakpoint-up(lg){
-			&::before{
-				content: '';
-				position: absolute;
-				right: 0;
-				top: 0;
-				@include triangle(45px 28px, $primary, up-right);
-			}
-		}
 		&::before{
 			content: '';
 			position: absolute;
-			left: 0;
+			right: 0;
 			top: 0;
-			@include triangle(16px 12px, $primary, up-left);
-		}
+			@include mt;
+				@include media-breakpoint-down(sm) {
+					right: auto;
+					left: 0;
+					border: none;
+					@include triangle(16px 12px, $primary, up-left);
+					
+				}
+				@include media-breakpoint-up(lg){
+					border: none;
+					@include triangle(45px 28px, $primary, up-right);
+				}
+			} 
+			@include media-breakpoint-down(sm) {
+				&.active{
+					&::before{
+						@include triangle(32px 24px, $primary, up-left);
+					}
+				}
+			}
+	 
 	}
 
 	&__title{
 		font-weight: bold;
 		font-size: rem(22);
 		line-height: (30 / 22);
-		margin-bottom: rem(22);
+		@include media-breakpoint-up(sm){
+			pointer-events: none;
+		}
 	}
-
+	
 	ul{
+		padding-top: rem(22);
 		list-style: none;
 		li{
 			margin-bottom: rem(20);
@@ -70,11 +111,40 @@
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(sm) {
+			ul {
+				display: block !important;
+			}
+	}
 	//
 	@include media-breakpoint-between(md, xl) { }
 	//
 	@include media-breakpoint-only(xl) {}
 	//
 	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(sm) {
+		&__item{
+			padding: 0;
+		}
+	
+		&__title{
+			padding: rem(15);
+			cursor: pointer;
+			position: relative;
+			&::after{
+				content: var(--arrowDown);
+				position: absolute;
+				right: rem(20);
+				top: rem(10);
+			}
+		}
+		ul{
+			display: none;
+			margin-top: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			padding: rem(15);
+		}
+	}
+	
 } // end.sCatalog

@@ -2,12 +2,12 @@ mixin allcss()
 	//- link(rel="stylesheet", href="libs/magnificPopup/magnific-popup.css")
 	//- link(rel="stylesheet", href="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.css")
 	//- link(rel="stylesheet", href="css/main.css")
-	link(rel="stylesheet", href="css/main.min.css" )
+	link(href="css/main.min.css", rel="stylesheet")
 
 mixin allcjs()
-	link(rel="stylesheet", href="libs/swiper/css/swiper.min.css")
+	link(href="libs/swiper/css/swiper.min.css", rel="stylesheet")
 	//- link(rel="stylesheet", href="libs/slick-carousel/slick/slick.css")
-	link(rel="stylesheet", href="libs/@fancyapps/fancybox/jquery.fancybox.min.css")
+	link(href="libs/@fancyapps/fancybox/jquery.fancybox.min.css", rel="stylesheet")
 	//- link(rel="stylesheet", href="fonts/fontello/css/fontello.css")
 	//- script(src="libs/vue/vue.min.js")
 	//- script(src="js/app.js")
@@ -22,8 +22,7 @@ mixin allcjs()
 	script(src="libs/swiper/js/swiper.min.js")
 	//- script(src="libs/slick-carousel/slick/slick.min.js")
 	// /slider libs
-
-	script(src="libs/inputmask/inputmask.min.js")
+ 
 	script(src="js/common.js")
 	//- cut text libs
 	//- script(src="libs/jquery.morelines.min.js")

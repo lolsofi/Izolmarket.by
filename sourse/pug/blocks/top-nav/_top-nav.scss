@@ -1,15 +1,19 @@
 .top-nav {
 	position: sticky; 
+		z-index: 1005;
 	left: 0;
-	top: 0;
-	z-index: 800;
-	background-color: #fff;
-	border-bottom: 1px solid #000; 
-	&.fixed { 
-		bottom: auto;
-		margin-top: 0;
+	top: 0; 
+	.row{
+		--bs-gutter-x: #{rem(20)};
 	}
-
+	@include media-breakpoint-up(lg) {
+		margin-bottom: rem(30);
+	}
+	.row{
+		align-items: center;
+	}
+	background-color: $primary; 
+ 
 	// 
 	@include media-breakpoint-up(xl) {}
 
@@ -48,3 +52,31 @@
 }
 
 
+.basket-btn{
+	color: #ffffff ;
+	&__icon-wrap{
+		position: relative;
+
+	}
+	&__count{
+		background: #FFFFFF;
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+		border-radius: 50%;
+		width: rem(12);
+		height: rem(12);
+		color: $primary;
+		position: absolute;
+		top: 0;right: 0;
+		font-weight: 600;
+		font-size: 8px;
+		text-align: center;
+	}
+	.icon{
+		font-size: rem(28);
+		color: #dbdbdb;
+	}
+	&__price{
+		margin-left: rem(5);
+		font-weight: 600;
+	}
+}

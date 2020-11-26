@@ -10,49 +10,61 @@
 
 	&__item{
 		display: flex;
+		margin-bottom: rem(35);
 		@include media-breakpoint-up(sm){
-			margin-bottom: rem(35);
 		}
-		margin-bottom: rem(10);
+		// margin-bottom: rem(10);
 	}
 
 	&__img-wrap{
+		margin-right: rem(28);
 		@include media-breakpoint-up(sm){
-			margin-right: rem(28);
 		}
-		margin-right: rem(13);
+		// margin-right: rem(13);
 		img{
 			@include media-breakpoint-up(sm){
 				height: rem(77);
 			}
-			height: rem(44);
+			height: rem(67);
+			// height: rem(44);
 		}
 	}
 
 	&__title{
 		font-weight: bold;
+		font-size: rem(22);
+		line-height: (30 / 22);
 		@include media-breakpoint-up(sm){
-			font-size: rem(22);
-			line-height: (30 / 22);
 			margin-bottom: rem(20);
 		}
-		margin-bottom: rem(5);
-		font-size: $small;
+		margin-bottom: rem(5); 
 		line-height: (19 / 14);
 	}
 
 	&__text{
 		// font-size: 22px;
 		@include media-breakpoint-up(sm){
-			line-height: (30 / 22);
-			font-size: $em-base;
+			line-height: (30 / 22); 
 		}
-		font-size: rem(9);
+		// font-size: rem(9);
 		line-height: (12 / 9);
 	}
 
-	
+	@include media-breakpoint-up(lg) {
 
+		.swiper-wrapper{
+			flex-wrap: wrap;
+			transform: none !important;
+			@include roww(rem(40));
+			width: calc(100% + #{rem(40)});
+		}
+	}
+		&__slide{
+			.swiper-pagination{
+
+				max-width: 50%;
+			}
+		}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -64,4 +76,10 @@
 	@include media-breakpoint-only(xl) {}
 	//
 	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(sm) {
+		margin-top: rem(10);
+		border-top: 1px solid #F1F1F1;
+		border-bottom: 1px solid #F1F1F1;
+		padding-bottom: rem(20);
+	}
 } // end.sAdvantages

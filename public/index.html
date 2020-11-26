@@ -7,8 +7,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
-		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png"><meta name="format-detection" content="telephone=no">
-		<link rel="image_src" href="http://genrif.ru/assets/i/soc-logo.png">
+		<link type="image/png" href="img/favicon/favicon.png" rel="shortcut icon"><meta name="format-detection" content="telephone=no">
+		<link href="http://genrif.ru/assets/i/soc-logo.png" rel="image_src">
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="content">
 		<meta property="og:title" content="content">
@@ -20,9 +20,153 @@
 		<meta property="og:image:height" content="504">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
-		<link rel="stylesheet" href="css/main.min.css"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<style>.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }</style>
 	</head>
-	<body> 
+	<body class="loaded_hiding"> 
+		<!--  мобильное меню-->
+		<!-- start topLine-->
+		<div class="topLine" id="topLine">
+			<div class="container">
+				<div class="topLine__row row">
+					<div class="col-xl-auto col-md col-auto order-xl-first"><a class="topLine__logo" href="/">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/logo.webp" type="image/webp"/>
+							<noscript class="loading-lazy"><img src="img/@2x/logo.png" loading="lazy" alt=""/></noscript>
+						</picture>
+						<!-- /picture--></a>
+					</div>
+					<div class="col-xl order-xl-0 order-last d-none d-lg-block">
+						<form class="search-block">
+							<div class="input-group"><input class="search-block__input form-control" placeholder="Поиск" type="text"/>
+								<select class="search-block__select form-select">
+									<option>Все категории</option>
+									<option>Все категории</option>
+									<option>Все категории</option>
+									<option>Все категории</option>
+								</select>
+								<button class="btn btn-outline-primary" type="button"> Найти</button>
+							</div>
+						</form>
+					</div>
+					<div class="col-auto d-none d-lg-block">
+						<button class="btn btn-light" type="button">Заявка на расчет</button>
+					</div>
+					<div class="col-auto d-none d-md-block">
+						<div class="topLine__item">
+							<div class="text-primary"> 
+								<svg class="icon icon-clock ">
+									<use xlink:href="img/svg/sprite.svg#clock"></use>
+								</svg>График работы
+							</div>ПН-ПТ: 09:00 - 18:00
+						</div>
+					</div>
+					<div class="col-auto d-none d-md-block">
+						<div class="topLine__item">
+							<div class="text-primary"> 
+								<svg class="icon icon-place ">
+									<use xlink:href="img/svg/sprite.svg#place"></use>
+								</svg>Самовывоз 
+							</div>ул.Бабушкина д8/6
+						</div>
+					</div>
+					<div class="col-auto">
+						<div class="row">
+							<div class="col-auto"><a class="topLine__link topLine__link--viber" href="#">
+								<svg class="icon icon-viber ">
+									<use xlink:href="img/svg/sprite.svg#viber"></use>
+								</svg></a>
+							</div>
+							<div class="col-auto"><a class="topLine__link topLine__link--telegram" href="#">
+								<svg class="icon icon-telegram ">
+									<use xlink:href="img/svg/sprite.svg#telegram"></use>
+								</svg></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-auto"><a class="topLine__tel" href="tel:+375 29 107-55-77">+375 29 107-55-77 </a><br/><a class="topLine__tel" href="tel:+37529107-55-77">+375 29 107-55-77</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end topLine-->
+		<!-- start top-nav-->
+		<div class="top-nav block-with-lazy">
+			<div class="container">
+				<div class="row"> 
+					<div class="col-auto d-lg-none">
+						<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+						</div>
+					</div>
+					<div class="col d-lg-none">
+						<form class="search-block">
+							<div class="input-group"><input class="search-block__input form-control" placeholder="Поиск" type="text"/>
+								<button class="btn" type="button"> 
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</button>
+							</div>
+						</form>
+					</div>
+					<div class="col-auto"><a class="basket-btn" href="#"><span class="basket-btn__icon-wrap">
+						<svg class="icon icon-basket ">
+							<use xlink:href="img/svg/sprite.svg#basket"></use>
+						</svg><span class="basket-btn__count">0 </span></span><span class="basket-btn__price">0р</span></a>
+					</div>
+					<div class="col-lg order-lg-first">
+						<div class="menu-mobile menu-mobile--js nav-wrap">
+							<div class="menu-mobile__inner">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+								</div><span></span>
+								<ul class="navMenu"> 
+									<li><a class="active" href="#">Главная</a></li>
+									<li class="has-children"><a class="btn" href="#">  Каталог</a>
+										<ul>
+											<li><a href="#">Теплоизоляция</a></li>
+											<li class="has-children-inner"><a href="#">Паро-гидро-изоляция</a>
+												<ul>
+													<li><a href="#"> Пароизоляционные плёнки</a></li>
+													<li><a href="#"> Гидро-ветроизоляционные плёнки</a></li>
+													<li><a href="#"> Дренажные мембраны</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+												</ul>
+											</li>
+											<li class="has-children-inner"><a href="#">Битумные материалы</a>
+												<ul>
+													<li><a href="#"> Пароизоляционные плёнки</a></li>
+													<li><a href="#"> Гидро-ветроизоляционные плёнки</a></li>
+													<li><a href="#"> Дренажные мембраны</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Сухие строительные смеси</a></li>
+											<li><a href="#">Древесно-плитные материалы</a></li>
+											<li><a href="#">Гипсокартон и комплектующие</a></li>
+											<li><a href="#">Прочие товары</a></li>
+											<li><a href="#">Метизная продукция</a></li>
+											<li><a href="#">Кровельные материалы</a></li>
+										</ul>
+									</li>
+									<li><a href="#"> Оплата</a></li>
+									<li><a href="#">Доставка</a></li>
+									<li><a href="#">Статьи</a></li>
+									<li><a href="#"> Новости </a></li>
+									<li><a href="#">Контакты </a></li>
+									<li><a href="#">О магазине </a></li>
+									<li><a class="btn" href="#">Оптовикам</a></li>
+								</ul>
+								<div class="d-lg-none ml-3 mt-3">
+									<button class="btn btn-light" type="button">Заявка на расчет</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end top-nav-->
 		<!-- start headerBlock-->
 		<div class="headerBlock section" id="headerBlock">
 			<div class="container">
@@ -57,132 +201,108 @@
 					</svg>
 					<h2>Каталог</h2>
 				</div>
-				<div class="row">
-					<div class="col-lg-9">
-						<div class="row">
-											<div class="col-lg-4">
-												<div class="sCatalog__item">
-													<div class="sCatalog__title">Теплоизоляция
-													</div>
-													<ul>
-														<li>Экструдированный пенополистирол</li>
-														<li>Утеплитель из&nbsp;стекловолокна</li>
-														<li>Базальтовый утеплитель</li>
-														<li>Пенопласт</li>
-													</ul>
-												</div>
-											</div>
-											<div class="col-lg-4">
-												<div class="sCatalog__item">
-													<div class="sCatalog__title">Паро-гидро-изоляция
-													</div>
-													<ul>
-														<li>Пароизоляционные плёнки</li>
-														<li>Гидро-ветроизоляционные плёнки</li>
-														<li>Дренажные мембраны</li>
-														<li>Комплектующие</li>
-													</ul>
-												</div>
-											</div>
-											<div class="col-lg-4">
-												<div class="sCatalog__item">
-													<div class="sCatalog__title">Прочие товары
-													</div>
-													<ul>
-														<li>Мастики</li>
-														<li>Праймеры</li>
-														<li>Наплавляемые рулонные материалы</li>
-													</ul>
-												</div>
-											</div>
-											<div class="col-lg-4">
-												<div class="sCatalog__item">
-													<div class="sCatalog__title">Паро-гидро-изоляция
-													</div>
-													<ul>
-														<li>Пароизоляционные плёнки</li>
-														<li>Гидро-ветроизоляционные плёнки</li>
-														<li>Дренажные мембраны</li>
-														<li>Комплектующие</li>
-													</ul>
-												</div>
-											</div>
-											<div class="col-lg-4">
-												<div class="sCatalog__item">
-													<div class="sCatalog__title">Метизная продукция
-													</div>
-													<ul>
-														<li>Дюбель-гвозди</li>
-														<li>Саморезы для гипсокартона</li>
-													</ul>
-												</div>
-											</div>
-											<div class="col-lg-4">
-												<div class="sCatalog__item">
-													<div class="sCatalog__title">Битумные материалы
-													</div>
-													<ul>
-														<li>Мастики</li>
-														<li>Праймеры</li>
-														<li>Наплавляемые рулонные материалы</li>
-													</ul>
-												</div>
-											</div>
-											<div class="col-lg-4">
-												<div class="sCatalog__item">
-													<div class="sCatalog__title">Древесно-плитные материалы
-													</div>
-													<ul>
-														<li>ЦСП плиты</li>
-														<li>ОСБ плиты </li>
-													</ul>
-												</div>
-											</div>
-											<div class="col-lg-4">
-												<div class="sCatalog__item">
-													<div class="sCatalog__title">Гипсокартон и комплектующие
-													</div>
-													<ul>
-														<li>Стеклохолст и клей</li>
-													</ul>
-												</div>
-											</div>
-											<div class="col-lg-4">
-												<div class="sCatalog__item">
-													<div class="sCatalog__title">Кровельные материалы
-													</div>
-													<ul>
-														<li>Гибкая черепица</li>
-													</ul>
-												</div>
-											</div>
+				<div class="sCatalog__row"> 
+					<div class="sCatalog__item">
+						<div class="sCatalog__title">Теплоизоляция
 						</div>
+						<ul>
+							<li><a href="#">Экструдированный пенополистирол</a></li>
+							<li><a href="#">Утеплитель из&nbsp;стекловолокна</a></li>
+							<li><a href="#">Базальтовый утеплитель</a></li>
+							<li><a href="#">Пенопласт</a></li>
+						</ul>
 					</div>
-					<div class="col-lg-3">
-						<div class="sCatalog__item">
-							<div class="sCatalog__title">Сухие строительные смеси
-							</div>
-							<ul>
-								<li>Штукатурка выравнивающая</li>
-								<li>Стяжка</li>
-								<li>Клей для плитки</li>
-								<li>Клей для теплоизоляции</li>
-								<li>Клей для блоков и&nbsp;кирпича</li>
-								<li>Штукатурка декоративная</li>
-								<li>Шпатлёвка</li>
-								<li>Самонивелир</li>
-								<li>Гидроизоляция</li>
-								<li>Грунтовки</li>
-								<li>Гипс строительный</li>
-								<li>Материалы для устройства промышленных полов</li>
-								<li>Монтажные смеси</li>
-								<li>Смеси для ремонта бетона</li>
-								<li>Цемент</li>
-								<li>Цемент</li>
-								<li>Добавки к&nbsp;растворам и&nbsp;бетонам</li>
-								<li>Клей для гипсокартона</li>
-							</ul>
+					<div class="sCatalog__item">
+						<div class="sCatalog__title">Паро-гидро-изоляция
 						</div>
+						<ul>
+							<li><a href="#">Пароизоляционные плёнки</a></li>
+							<li><a href="#">Гидро-ветроизоляционные плёнки</a></li>
+							<li><a href="#">Дренажные мембраны</a></li>
+							<li><a href="#">Комплектующие</a></li>
+						</ul>
+					</div>
+					<div class="sCatalog__item">
+						<div class="sCatalog__title">Прочие товары
+						</div>
+						<ul>
+							<li><a href="#">Мастики</a></li>
+							<li><a href="#">Праймеры</a></li>
+							<li><a href="#">Наплавляемые рулонные материалы</a></li>
+						</ul>
+					</div>
+					<div class="sCatalog__item">
+						<div class="sCatalog__title">Паро-гидро-изоляция
+						</div>
+						<ul>
+							<li><a href="#">Пароизоляционные плёнки</a></li>
+							<li><a href="#">Гидро-ветроизоляционные плёнки</a></li>
+							<li><a href="#">Дренажные мембраны</a></li>
+							<li><a href="#">Комплектующие</a></li>
+						</ul>
+					</div>
+					<div class="sCatalog__item">
+						<div class="sCatalog__title">Метизная продукция
+						</div>
+						<ul>
+							<li><a href="#">Дюбель-гвозди</a></li>
+							<li><a href="#">Саморезы для гипсокартона</a></li>
+						</ul>
+					</div>
+					<div class="sCatalog__item">
+						<div class="sCatalog__title">Битумные материалы
+						</div>
+						<ul>
+							<li><a href="#">Мастики</a></li>
+							<li><a href="#">Праймеры</a></li>
+							<li><a href="#">Наплавляемые рулонные материалы</a></li>
+						</ul>
+					</div>
+					<div class="sCatalog__item">
+						<div class="sCatalog__title">Древесно-плитные материалы
+						</div>
+						<ul>
+							<li><a href="#">ЦСП плиты</a></li>
+							<li><a href="#">ОСБ плиты </a></li>
+						</ul>
+					</div>
+					<div class="sCatalog__item">
+						<div class="sCatalog__title">Гипсокартон и комплектующие
+						</div>
+						<ul>
+							<li><a href="#">Стеклохолст и клей</a></li>
+						</ul>
+					</div>
+					<div class="sCatalog__item">
+						<div class="sCatalog__title">Кровельные материалы
+						</div>
+						<ul>
+							<li><a href="#">Гибкая черепица  </a></li>
+						</ul>
+					</div>
+					<div class="sCatalog__item">
+						<div class="sCatalog__title">Сухие строительные смеси
+						</div>
+						<ul>
+							<li><a href="#">Штукатурка выравнивающая</a></li>
+							<li><a href="#">Стяжка</a></li>
+							<li><a href="#">Клей для плитки</a></li>
+							<li><a href="#">Клей для теплоизоляции</a></li>
+							<li><a href="#">Клей для блоков и&nbsp;кирпича</a></li>
+							<li><a href="#">Штукатурка декоративная</a></li>
+							<li><a href="#">Шпатлёвка</a></li>
+							<li><a href="#">Самонивелир</a></li>
+							<li><a href="#">Гидроизоляция</a></li>
+							<li><a href="#">Грунтовки</a></li>
+							<li><a href="#">Гипс строительный</a></li>
+							<li><a href="#">Материалы для устройства промышленных полов</a></li>
+							<li><a href="#">Монтажные смеси</a></li>
+							<li><a href="#">Смеси для ремонта бетона</a></li>
+							<li><a href="#">Цемент</a></li>
+							<li><a href="#">Цемент</a></li>
+							<li><a href="#">Добавки к&nbsp;растворам и&nbsp;бетонам</a></li>
+							<li><a href="#">Клей для гипсокартона</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -191,8 +311,9 @@
 		<!-- start sAdvantages-->
 		<div class="sAdvantages section" id="sAdvantages">
 			<div class="container">
-				<div class="row">
-							<div class="col-lg-6">
+				<div class="sAdvantages__slider sAdvantages__slider--js swiper-container">
+					<div class="swiper-wrapper">
+							<div class="sAdvantages__slide swiper-slide">
 								<div class="sAdvantages__item">
 									<div class="sAdvantages__img-wrap"><img src="img/svg/advantage-1.svg" alt=""/>
 									</div>
@@ -204,7 +325,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6">
+							<div class="sAdvantages__slide swiper-slide">
 								<div class="sAdvantages__item">
 									<div class="sAdvantages__img-wrap"><img src="img/svg/advantage-2.svg" alt=""/>
 									</div>
@@ -216,7 +337,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6">
+							<div class="sAdvantages__slide swiper-slide">
 								<div class="sAdvantages__item">
 									<div class="sAdvantages__img-wrap"><img src="img/svg/advantage-3.svg" alt=""/>
 									</div>
@@ -228,7 +349,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6">
+							<div class="sAdvantages__slide swiper-slide">
 								<div class="sAdvantages__item">
 									<div class="sAdvantages__img-wrap"><img src="img/svg/advantage-4.svg" alt=""/>
 									</div>
@@ -240,7 +361,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6">
+							<div class="sAdvantages__slide swiper-slide">
 								<div class="sAdvantages__item">
 									<div class="sAdvantages__img-wrap"><img src="img/svg/advantage-5.svg" alt=""/>
 									</div>
@@ -252,7 +373,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6">
+							<div class="sAdvantages__slide swiper-slide">
 								<div class="sAdvantages__item">
 									<div class="sAdvantages__img-wrap"><img src="img/svg/advantage-6.svg" alt=""/>
 									</div>
@@ -264,7 +385,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6">
+							<div class="sAdvantages__slide swiper-slide">
 								<div class="sAdvantages__item">
 									<div class="sAdvantages__img-wrap"><img src="img/svg/advantage-7.svg" alt=""/>
 									</div>
@@ -276,7 +397,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6">
+							<div class="sAdvantages__slide swiper-slide">
 								<div class="sAdvantages__item">
 									<div class="sAdvantages__img-wrap"><img src="img/svg/advantage-8.svg" alt=""/>
 									</div>
@@ -288,6 +409,8 @@
 									</div>
 								</div>
 							</div>
+					</div>
+					<div class="swiper-pagination d-lg-none"></div>
 				</div>
 			</div>
 		</div>
@@ -657,7 +780,7 @@
 										<use xlink:href="img/svg/sprite.svg#mobile"></use>
 									</svg>
 								</div>
-								<div class="footer__text-block"><a class="footer__tel" href="tel:+375 29 316-55-77">+375 29 316-55-77</a><a class="footer__tel" href="tel:+375 29 316-55-77">+375 29 107-55-77</a>
+								<div class="footer__text-block"><a class="footer__tel" href="tel:+37529316-55-77">+375 29 316-55-77</a><a class="footer__tel" href="tel:+37529316-55-77">+375 29 107-55-77</a>
 								</div>
 							</li>
 						</ul>
@@ -665,55 +788,27 @@
 					<div class="col-md-4 footerBlock">
 						<div class="footer__title">Каталог
 						</div>
-									<ul class="list">
-										<li><a href="#">Теплоизоляция</a></li>
-									</ul>
-									<ul class="list">
-										<li><a href="#">Паро-гидро-изоляция</a></li>
-									</ul>
-									<ul class="list">
-										<li><a href="#">Битумные материалы</a></li>
-									</ul>
-									<ul class="list">
-										<li><a href="#">Сухие строительные смеси</a></li>
-									</ul>
-									<ul class="list">
-										<li><a href="#">Древесно-плитные материалы</a></li>
-									</ul>
-									<ul class="list">
-										<li><a href="#">Гипсокартон и комплектующие</a></li>
-									</ul>
-									<ul class="list">
-										<li><a href="#">Прочие товары</a></li>
-									</ul>
-									<ul class="list">
-										<li><a href="#">Метизная продукция</a></li>
-									</ul>
-									<ul class="list">
-										<li><a href="#">Кровельные материалы</a></li>
-									</ul>
+						<ul class="list">
+									<li><a href="#">Теплоизоляция</a></li>
+									<li><a href="#">Паро-гидро-изоляция</a></li>
+									<li><a href="#">Битумные материалы</a></li>
+									<li><a href="#">Сухие строительные смеси</a></li>
+									<li><a href="#">Древесно-плитные материалы</a></li>
+									<li><a href="#">Гипсокартон и комплектующие</a></li>
+									<li><a href="#">Прочие товары</a></li>
+									<li><a href="#">Метизная продукция</a></li>
+									<li><a href="#">Кровельные материалы</a></li>
+						</ul>
 					</div>
 					<div class="col-md-4">
 						<div class="footer__title">Информация
 						</div>
-									<ul class="list">
-										<li><a href="#">О магазине</a></li>
-									</ul>
-									<ul class="list">
-										<li><a href="#">Оплата</a></li>
-									</ul>
-									<ul class="list">
-										<li><a href="#">Доставка</a></li>
-									</ul>
-									<ul class="list">
-										<li><a href="#">Политика безопасности</a></li>
-									</ul>
-									<ul class="list">
-										<li><a href="#">Оптовикам</a></li>
-									</ul>
-									<ul class="list">
-										<li><a href="#">Контакты</a></li>
-									</ul>
+								<li><a href="#">О магазине</a></li>
+								<li><a href="#">Оплата</a></li>
+								<li><a href="#">Доставка</a></li>
+								<li><a href="#">Политика безопасности</a></li>
+								<li><a href="#">Оптовикам</a></li>
+								<li><a href="#">Контакты</a></li>
 					</div>
 				</div>
 			</div>
@@ -742,8 +837,8 @@
 		</div>
 		<!-- #modal-call-->
 		<!-- end modals-->
-		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
-		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
+		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<!-- modal libs-->
@@ -752,7 +847,6 @@
 		<!-- slider libs-->
 		<script src="libs/swiper/js/swiper.min.js"></script>
 		<!-- /slider libs-->
-		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

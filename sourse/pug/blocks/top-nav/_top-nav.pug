@@ -1,27 +1,68 @@
 mixin mob-mnu()
 	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
-	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
-			span
-		+e.inner
-		
-			+mnu()
-			.text-right
+ 
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			+mnu()
-					
+			.row 
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js
+						span
+				.col.d-lg-none
+					+b.FORM.search-block
+						.input-group
+							+e.INPUT.input.form-control(placeholder="Поиск") 
+							button.btn(type="button") 
+								+icon('search')
+				.col-auto
+					+b.basket-btn(href="#")
+						+e.icon-wrap
+							+icon('basket')
+							+e.count 0 
+						+e.price 0р
+				.col-lg.order-lg-first
+					+b.menu-mobile--js.nav-wrap
+						+e.inner
+							+b.toggle-menu-mobile--js.d-lg-none
+								span
+							span
+							+b.UL.navMenu 
+								li
+									a.active(href="#") Главная
+								li.has-children
+									a.btn(href="#")   Каталог
+									ul
+										li: a(href="#") Теплоизоляция
+										li.has-children-inner
+											a(href="#") Паро-гидро-изоляция
+											ul
+												li: a(href="#")  Пароизоляционные плёнки
+												li: a(href="#")  Гидро-ветроизоляционные плёнки
+												li: a(href="#")  Дренажные мембраны
+												li: a(href="#")  Комплектующие
+										li.has-children-inner
+											a(href="#") Битумные материалы
+											ul
+												li: a(href="#")  Пароизоляционные плёнки
+												li: a(href="#")  Гидро-ветроизоляционные плёнки
+												li: a(href="#")  Дренажные мембраны
+												li: a(href="#")  Комплектующие
+										li: a(href="#") Сухие строительные смеси
+										li: a(href="#") Древесно-плитные материалы
+										li: a(href="#") Гипсокартон и комплектующие
+										li: a(href="#") Прочие товары
+										li: a(href="#") Метизная продукция
+										li: a(href="#") Кровельные материалы
+
+								li: a(href="#")  Оплата
+								li: a(href="#") Доставка
+								li: a(href="#") Статьи
+								li: a(href="#")  Новости 
+								li: a(href="#") Контакты 
+								li: a(href="#") О магазине 
+								li: a.btn(href="#") Оптовикам
+							.d-lg-none.ml-3.mt-3
+								button.btn.btn-light(type="button") Заявка на расчет
 	// end top-nav

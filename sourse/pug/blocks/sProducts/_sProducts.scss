@@ -121,6 +121,7 @@
 
 	&__btn{
 		@extend .btn;
+		@extend .btn-primary;
 		@include media-breakpoint-up(lg){
 			padding: rem(10) rem(25);
 		}
