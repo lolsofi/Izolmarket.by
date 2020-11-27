@@ -8,8 +8,10 @@ mixin headerBlock()
 						- for (var x = 0; x < 3; x++)
 							+e.slide.swiper-slide
 								+e.PICTURE.item
-									source.swiper-lazy(data-srcset=`img/@2x/webp/banner.webp` type=`image/webp` srcset="#")
-									img.swiper-lazy(data-src=`img/@2x/banner.jpg`, src="#", alt="")
+									source.swiper-lazy(data-srcset='img/@2x/webp/banner.webp' type='image/webp' srcset="#" media='(min-width:576px)')
+									source.swiper-lazy(data-srcset='img/@1x/webp/banner.webp' type='image/webp' srcset="#")
+									source.swiper-lazy(data-srcset='img/@1x/banner.jpg' type='image/jpg' srcset="#" media='(min-width:576px)') 
+									img.object-fit-js.swiper-lazy(data-src='img/@1x/stock.jpg' src="#" alt='')
 					.swiper-pagination
 
 
