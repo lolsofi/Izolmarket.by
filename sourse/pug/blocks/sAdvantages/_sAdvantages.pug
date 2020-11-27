@@ -8,7 +8,7 @@ mixin sAdvantages(data)
 						+e.slide.swiper-slide
 							+e.item
 								+e.img-wrap
-									img(src=`img/svg/advantage-${i}.svg`, alt="")
+									img(src=`img/svg/advantage-${i}.svg`, alt="", loading="lazy")
 								+e.text-block
 									+e.title!= t
 									+e.text!= tx

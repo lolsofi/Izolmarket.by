@@ -174,48 +174,6 @@ function eventHandler() {
 	whenResize();
 
 
-	let defaultSl = {
-		spaceBetween: 0,
-		lazy: {
-			loadPrevNext: true,
-		},
-		watchOverflow: true,
-		spaceBetween: 0,
-		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-		},
-	}
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-
-	});
-	// modal window
-
-	window.onload = function () {
-		document.body.classList.add('loaded_hiding');
-		window.setTimeout(function () {
-			document.body.classList.add('loaded');
-			document.body.classList.remove('loaded_hiding');
-		}, 500);
-	}
-
 	$('.sProducts').each(function () {
 		var reviewSlider = new Swiper($(this).find('.sProducts__slider--js'), {
 			spaceBetween: 30,
@@ -255,17 +213,12 @@ function eventHandler() {
 	var reviewSlider = new Swiper('.headerBlock__slider--js', {
 		spaceBetween: 30,
 		slidesPerView: 1,
-		// grabCursor: true,
-		// centeredSlides: true,
-		//breakpoints
 		loop: true,
 		//lazy
 		lazy: {
 			loadPrevNext: true,
 			loadPrevNextAmount: 2
 		},
-		//nav
-		//pugination
 		pagination: {
 			el: $('.headerBlock').find('.swiper-pagination'),
 			clickable: true
@@ -274,11 +227,7 @@ function eventHandler() {
 	var sAdvantages = new Swiper('.sAdvantages__slider--js', {
 		spaceBetween: 0,
 		slidesPerView: 1,
-		// grabCursor: true,
-		// centeredSlides: true,
-		//breakpoints
 		loop: true,
-		//lazy
 		lazy: {
 			loadPrevNext: true,
 			loadPrevNextAmount: 2
@@ -308,3 +257,10 @@ if (document.readyState !== 'loading') {
 }
 
 
+window.onload = function () {
+	document.body.classList.add('loaded_hiding');
+	window.setTimeout(function () {
+		document.body.classList.add('loaded');
+		document.body.classList.remove('loaded_hiding');
+	}, 500);
+}
