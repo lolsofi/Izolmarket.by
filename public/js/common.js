@@ -5,64 +5,6 @@ var JSCCommon = {
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
-	modalCall: function modalCall() {
-		$(".link-modal").fancybox({
-			arrows: false,
-			infobar: false,
-			touch: false,
-			type: 'inline',
-			autoFocus: false,
-			i18n: {
-				en: {
-					CLOSE: "Закрыть",
-					NEXT: "Вперед",
-					PREV: "Назад" // PLAY_START: "Start slideshow",
-					// PLAY_STOP: "Pause slideshow",
-					// FULL_SCREEN: "Full screen",
-					// THUMBS: "Thumbnails",
-					// DOWNLOAD: "Download",
-					// SHARE: "Share",
-					// ZOOM: "Zoom"
-
-				}
-			},
-			beforeLoad: function beforeLoad() {
-				document.querySelector("html").classList.add("fixed");
-			},
-			afterClose: function afterClose() {
-				document.querySelector("html").classList.remove("fixed");
-			}
-		});
-		$(".modal-close-js").click(function () {
-			$.fancybox.close();
-		});
-		$.fancybox.defaults.backFocus = false;
-		var linkModal = document.querySelectorAll('.link-modal');
-
-		function addData() {
-			linkModal.forEach(function (element) {
-				element.addEventListener('click', function () {
-					var modal = document.querySelector(element.getAttribute("href"));
-					var data = element.dataset;
-
-					function setValue(val, elem) {
-						if (elem && val) {
-							var el = modal.querySelector(elem);
-							el.tagName == "INPUT" ? el.value = val : el.innerHTML = val; // console.log(modal.querySelector(elem).tagName)
-						}
-					}
-
-					setValue(data.title, '.ttu');
-					setValue(data.text, '.after-headline');
-					setValue(data.btn, '.btn');
-					setValue(data.order, '.order');
-				});
-			});
-		}
-
-		if (linkModal) addData();
-	},
-	// /modalCall
 	toggleMenu: function toggleMenu() {
 		var _this = this;
 
@@ -140,17 +82,11 @@ var JSCCommon = {
 			}, 1100);
 			return false;
 		});
-	},
-	getCurrentYear: function getCurrentYear(el) {
-		var now = new Date();
-		var currentYear = document.querySelector(el);
-		if (currentYear) currentYear.innerText = now.getFullYear();
 	}
 };
 var $ = jQuery;
 
 function eventHandler() {
-	JSCCommon.modalCall();
 	JSCCommon.mobileMenu();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile();

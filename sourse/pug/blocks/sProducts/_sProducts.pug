@@ -24,7 +24,9 @@ mixin productSlide()
 			.row
 				.col-auto
 					a(href="#")
-						img.swiper-lazy(src="#" data-src=`img/@2x/image-blocks.jpg`, alt="")
+						picture
+							source.swiper-lazy(data-srcset=`img/@2x/webp/image-blocks.webp` type=`image/webp` srcset="#")
+							img.swiper-lazy(data-src=`img/@2x/image-blocks.jpg`, src="#", alt="")
 					+b.add
 						+e.btn--minus
 						input(type="number" value="1")

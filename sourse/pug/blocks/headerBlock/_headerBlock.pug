@@ -7,8 +7,9 @@ mixin headerBlock()
 					.swiper-wrapper
 						- for (var x = 0; x < 3; x++)
 							+e.slide.swiper-slide
-								+e.item
-									img.swiper-lazy(src="#" data-src=`img/@2x/banner.jpg`, alt="")
+								+e.PICTURE.item
+									source.swiper-lazy(data-srcset=`img/@2x/webp/banner.webp` type=`image/webp` srcset="#")
+									img.swiper-lazy(data-src=`img/@2x/banner.jpg`, src="#", alt="")
 					.swiper-pagination
 
 
