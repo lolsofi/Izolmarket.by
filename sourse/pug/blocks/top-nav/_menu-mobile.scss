@@ -76,5 +76,9 @@ $h: rem(2);
 }
 
 .menu-mobile {
-	 
+	 .toggle-menu-mobile{
+		 margin-right: rem(20);
+		 z-index: 20;
+		 margin-top: -10px;
+	 }
 }

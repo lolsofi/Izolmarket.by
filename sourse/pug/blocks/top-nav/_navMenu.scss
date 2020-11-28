@@ -1,7 +1,7 @@
 @include media-breakpoint-down(lg) {
 	.menu-mobile{
 		&__inner{
-			padding: rem(16) 0;
+			padding: rem(65) 0 rem(16);
 
 		overflow-y: auto;
 		overflow-x: hidden;
@@ -10,7 +10,11 @@
 		.toggle-menu-mobile{
 			color: $primary;
 			margin-left: auto;
-			margin-bottom: rem(10);
+			// margin-bottom: rem(10);
+			position: absolute;
+			right: 10px;
+			top: rem(60);
+			z-index: 10;
 		}
 	}
 }
@@ -102,8 +106,8 @@
 		font-size: 1rem;
 		color: $primary;
 		@include media-breakpoint-down(lg){
-			padding-left: 0;
-			padding-right: 0;
+			// padding-left: 0;
+			// padding-right: 0;
 		}
 			@include media-breakpoint-up(lg){
 				text-align: center;
@@ -121,6 +125,13 @@
 		padding: rem(4) rem(10);
 	margin-left: rem(10);
 	margin-right: rem(10);
+	}
+	a{
+		@include media-breakpoint-down(lg) {
+			padding-left: 16px !important;
+			padding-right: 16px !important;
+			margin-left: 0 !important;
+		}
 	}
 	.has-children{
 		@include media-breakpoint-up(xl) {

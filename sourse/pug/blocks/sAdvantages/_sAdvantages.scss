@@ -61,10 +61,10 @@
 		}
 	}
 		&__slide{
-			&.swiper-slide-duplicate{
-				display: none;
-			}
 			@include media-breakpoint-up(lg)   {
+				&.swiper-slide-duplicate{
+					display: none !important;
+				}
 
 				max-width: 50%;
 			}

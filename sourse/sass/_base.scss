@@ -71,7 +71,9 @@ body {
 		left: 0;
 		top: 0;
 		z-index: 999;
-
+		.top-nav{
+			// position: fixed;
+		}
 		&::before {
 			z-index: 999;
 			opacity: 0.76;

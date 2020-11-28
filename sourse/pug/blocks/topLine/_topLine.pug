@@ -3,7 +3,7 @@ mixin topLine()
 	+b.topLine#topLine&attributes(attributes)
 		.container
 			+e.row.row
-				.col-xl-auto.col-md.col-auto.order-xl-first
+				+e.col-mobile.col-xl-auto.col-md.col-auto.order-xl-first
 					+e.logo(href="/")
 						+pic('logo.png','',0)
 				.col-xl.order-xl-0.order-last.d-none.d-lg-block
@@ -38,7 +38,7 @@ mixin topLine()
 						.col-auto
 							+e.link--telegram(href="#")
 								+icon('telegram')
-				.col-auto
+				+e.col-mobile.col-auto.text-right
 					+e.tel(href="tel:+375 29 107-55-77") +375 29 107-55-77 
 					br
 					+e.tel(href="tel:+37529107-55-77") +375 29 107-55-77
