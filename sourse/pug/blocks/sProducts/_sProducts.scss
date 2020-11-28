@@ -170,7 +170,7 @@
 		position: relative;
 		padding: 0;
 		width: rem(22);
-		height: rem(20);
+		height: rem(21);
 		flex: 0 0 rem(22);
 		&::before,
 		&::after{
@@ -180,7 +180,8 @@
 		}
 		&--minus{
 			background: #D2D2D2;
-			border: none;
+			// border: none;
+			border-color: #D2D2D2;
 			border-radius: 0;
 			&::before{
 				width: rem(7);
