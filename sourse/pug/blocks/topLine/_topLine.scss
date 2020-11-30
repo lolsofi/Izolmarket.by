@@ -70,6 +70,9 @@
 
 			}
 			&--viber{
+				@include media-breakpoint-up(xl) {
+					margin-left: rem(10);
+				}
 				--bg: #7c509a;
 				--bgHover: #{lighten($color: #7c509a, $amount: 10)};
 			}
@@ -114,7 +117,7 @@
 			}
 		}
 		&__tel{
-			font-size: 10px;
+			// font-size: 10px;
 		}
 	}
 	@include media-breakpoint-down(xs) {} 
@@ -125,7 +128,7 @@
 		border-radius: 2px !important;
 	}
 	@include media-breakpoint-up(xl) {
-		max-width: rem(355);
+		// max-width: rem(355);
 		margin-top: 0;
 		margin-bottom: 0;
 	}
