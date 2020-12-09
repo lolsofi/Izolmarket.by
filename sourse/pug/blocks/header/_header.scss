@@ -1,6 +1,14 @@
 
 	// start .header
+	.fixed .header{
+		position: fixed;
+	}
 	.header {
+		position: sticky;
+		left: 0;
+		top: 0;
+		z-index: 1010;
+		width: 100%;
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

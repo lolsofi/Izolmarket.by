@@ -181,7 +181,8 @@ function eventHandler() {
 		$(this).next().slideToggle();
 		$(this).parent().toggleClass('active');
 	})
-	$(".has-children > a, .has-children-inner  > a ").click(function (e) {
+	$(".has-children > a, .has-children-inner  > a ").after('<div class="before"></div>')
+	$(".has-children > .before, .has-children-inner  > .before ").click(function (e) {
 		e.preventDefault();
 		$(this).next().slideToggle();
 	})

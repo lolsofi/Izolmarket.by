@@ -14,18 +14,18 @@ block title
 	title= title
 block pagecontent
 
-	+mob-mnu()
 	//- +header()
-	+topLine()
-	+top-nav()
-	 
-	//- +headerBlock()
-	//- +sCatalog()
-	//- +sAdvantages()
-	//- +sProducts('Хиты продаж','HIT')(class="sProducts-bgWhite")
-	//- +sProducts('Новые поступления','NEW')
-	//- +sProducts('Уцененные товары','%')(class="sProducts-bgWhite")
-	//- +sContent()
+	header.header
+		+mob-mnu()
+		+topLine()
+		+top-nav() 
+	+headerBlock()
+	+sCatalog()
+	+sAdvantages()
+	+sProducts('Хиты продаж','HIT')(class="sProducts-bgWhite")
+	+sProducts('Новые поступления','NEW')
+	+sProducts('Уцененные товары','%')(class="sProducts-bgWhite")
+	+sContent()
 	+footer()
 
 
