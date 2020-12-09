@@ -1,3 +1,9 @@
+.fixed {
+	.top-nav,
+	.topLine{
+		position: fixed;
+	}
+}
 .top-nav {
 	position: sticky;
 	// position: relative;
@@ -10,7 +16,7 @@
 	@include media-breakpoint-up(sm) {
 		top: rem(65); 
 	}
-	top: rem(45); 
+	top: rem(48); 
 
 	width: 100%;
 	.row{
