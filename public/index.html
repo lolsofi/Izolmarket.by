@@ -25,181 +25,179 @@
 		<style>.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }</style>
 	</head>
 	<body class="loaded_hiding"> 
-		<header class="header">
-			<!--  мобильное меню-->
-			<!-- start topLine-->
-			<div class="topLine" id="topLine">
-				<div class="container">
-					<div class="topLine__row row">
-						<div class="topLine__col-mobile col-xl-auto col-md col-auto order-xl-first"><a class="topLine__logo" href="/">
-							<!-- picture-->
-							<picture> 
-								<source srcset="img/@2x/webp/logo.webp" type="image/webp"/>
-								<noscript class="loading-lazy"><img src="img/@2x/logo.png" loading="lazy" alt=""/></noscript>
-							</picture>
-							<!-- /picture--></a>
+		<!--  мобильное меню-->
+		<!-- start topLine-->
+		<div class="topLine" id="topLine">
+			<div class="container">
+				<div class="topLine__row row">
+					<div class="topLine__col-mobile col-xl-auto col-md col-auto order-xl-first"><a class="topLine__logo" href="/">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/logo.webp" type="image/webp"/>
+							<noscript class="loading-lazy"><img src="img/@2x/logo.png" loading="lazy" alt=""/></noscript>
+						</picture>
+						<!-- /picture--></a>
+					</div>
+					<div class="col-xl order-xl-0 order-last d-none d-lg-block">
+						<form class="search-block">
+							<div class="input-group"><input class="search-block__input form-control" placeholder="Поиск" type="text"/>
+								<select class="search-block__select form-select">
+									<option>Все категории</option>
+									<option>Все категории</option>
+									<option>Все категории</option>
+									<option>Все категории</option>
+								</select>
+								<button class="btn btn-outline-primary" type="button"> Найти</button>
+							</div>
+						</form>
+					</div>
+					<div class="col-auto d-none d-lg-block">
+						<button class="btn btn-light" type="button">Заявка на расчет</button>
+					</div>
+					<div class="col-auto d-none d-md-block">
+						<div class="topLine__item">
+							<div class="text-primary"> 
+								<svg class="icon icon-clock ">
+									<use xlink:href="img/svg/sprite.svg#clock"></use>
+								</svg>График работы
+							</div>ПН-ПТ: 09:00 - 18:00
 						</div>
-						<div class="col-xl order-xl-0 order-last d-none d-lg-block">
-							<form class="search-block">
-								<div class="input-group"><input class="search-block__input form-control" placeholder="Поиск" type="text"/>
-									<select class="search-block__select form-select">
-										<option>Все категории</option>
-										<option>Все категории</option>
-										<option>Все категории</option>
-										<option>Все категории</option>
-									</select>
-									<button class="btn btn-outline-primary" type="button"> Найти</button>
-								</div>
-							</form>
+					</div>
+					<div class="col-auto d-none d-md-block">
+						<div class="topLine__item">
+							<div class="text-primary"> 
+								<svg class="icon icon-place ">
+									<use xlink:href="img/svg/sprite.svg#place"></use>
+								</svg>Самовывоз 
+							</div>ул.Бабушкина д8/6
 						</div>
-						<div class="col-auto d-none d-lg-block">
-							<button class="btn btn-light" type="button">Заявка на расчет</button>
-						</div>
-						<div class="col-auto d-none d-md-block">
-							<div class="topLine__item">
-								<div class="text-primary"> 
-									<svg class="icon icon-clock ">
-										<use xlink:href="img/svg/sprite.svg#clock"></use>
-									</svg>График работы
-								</div>ПН-ПТ: 09:00 - 18:00
+					</div>
+					<div class="col-auto">
+						<div class="row">
+							<div class="col-auto"><a class="topLine__link topLine__link--viber" href="#">
+								<svg class="icon icon-viber ">
+									<use xlink:href="img/svg/sprite.svg#viber"></use>
+								</svg></a>
+							</div>
+							<div class="col-auto"><a class="topLine__link topLine__link--telegram" href="#">
+								<svg class="icon icon-telegram ">
+									<use xlink:href="img/svg/sprite.svg#telegram"></use>
+								</svg></a>
 							</div>
 						</div>
-						<div class="col-auto d-none d-md-block">
-							<div class="topLine__item">
-								<div class="text-primary"> 
-									<svg class="icon icon-place ">
-										<use xlink:href="img/svg/sprite.svg#place"></use>
-									</svg>Самовывоз 
-								</div>ул.Бабушкина д8/6
-							</div>
+					</div>
+					<div class="topLine__col-mobile col-auto text-right"><a class="topLine__tel" href="tel:+375 29 107-55-77">+375 29 107-55-77 </a><br/><a class="topLine__tel" href="tel:+37529107-55-77">+375 29 107-55-77</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end topLine-->
+		<!-- start top-nav-->
+		<div class="top-nav block-with-lazy">
+			<div class="container">
+				<div class="row"> 
+					<div class="col-auto d-lg-none">
+						<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 						</div>
-						<div class="col-auto">
-							<div class="row">
-								<div class="col-auto"><a class="topLine__link topLine__link--viber" href="#">
-									<svg class="icon icon-viber ">
-										<use xlink:href="img/svg/sprite.svg#viber"></use>
-									</svg></a>
-								</div>
-								<div class="col-auto"><a class="topLine__link topLine__link--telegram" href="#">
-									<svg class="icon icon-telegram ">
-										<use xlink:href="img/svg/sprite.svg#telegram"></use>
-									</svg></a>
+					</div>
+					<div class="col d-lg-none">
+						<form class="search-block">
+							<div class="input-group"><input class="search-block__input form-control" placeholder="Поиск" type="text"/>
+								<button class="btn" type="button"> 
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</button>
+							</div>
+						</form>
+					</div>
+					<div class="col-auto"><a class="basket-btn" href="#"><span class="basket-btn__icon-wrap">
+						<svg class="icon icon-basket ">
+							<use xlink:href="img/svg/sprite.svg#basket"></use>
+						</svg><span class="basket-btn__count">0 </span></span><span class="basket-btn__price">0р</span></a>
+					</div>
+					<div class="col-lg order-lg-first">
+						<div class="menu-mobile menu-mobile--js nav-wrap">
+							<div class="menu-mobile__inner">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none">
+									<svg class="icon icon-menu ">
+										<use xlink:href="img/svg/sprite.svg#menu"></use>
+									</svg>
+								</div><span></span>
+								<ul class="navMenu"> 
+									<li><a href="#">Главная</a></li>
+									<li class="has-children"><a class="btn" href="#">  Каталог</a>
+										<ul>
+											<li><a href="#">Теплоизоляция</a></li>
+											<li class="has-children-inner"><a href="#">Паро-гидро-изоляция</a>
+												<ul>
+													<li><a href="#"> Пароизоляционные плёнки</a></li>
+													<li><a href="#"> Гидро-ветроизоляционные плёнки</a></li>
+													<li><a href="#"> Дренажные мембраны</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+												</ul>
+											</li>
+											<li class="has-children-inner"><a href="#">Битумные материалы</a>
+												<ul>
+													<li><a href="#"> Пароизоляционные плёнки</a></li>
+													<li><a href="#"> Гидро-ветроизоляционные плёнки</a></li>
+													<li><a href="#"> Дренажные мембраны</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+													<li><a href="#"> Комплектующие</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Сухие строительные смеси</a></li>
+											<li><a href="#">Древесно-плитные материалы</a></li>
+											<li><a href="#">Гипсокартон и комплектующие</a></li>
+											<li><a href="#">Прочие товары</a></li>
+											<li><a href="#">Метизная продукция</a></li>
+											<li><a href="#">Кровельные материалы</a></li>
+										</ul>
+									</li>
+									<li><a href="#"> Оплата</a></li>
+									<li><a href="#">Доставка</a></li>
+									<li><a href="#">Статьи</a></li>
+									<li><a href="#"> Новости </a></li>
+									<li><a href="#">Контакты </a></li>
+									<li><a href="#">О магазине </a></li>
+									<li><a class="btn" href="#">Оптовикам</a></li>
+								</ul>
+								<div class="d-lg-none ml-3 mt-3">
+									<button class="btn btn-light" type="button">Заявка на расчет</button>
 								</div>
 							</div>
-						</div>
-						<div class="topLine__col-mobile col-auto text-right"><a class="topLine__tel" href="tel:+375 29 107-55-77">+375 29 107-55-77 </a><br/><a class="topLine__tel" href="tel:+37529107-55-77">+375 29 107-55-77</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- end topLine-->
-			<!-- start top-nav-->
-			<div class="top-nav block-with-lazy">
-				<div class="container">
-					<div class="row"> 
-						<div class="col-auto d-lg-none">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-							</div>
-						</div>
-						<div class="col d-lg-none">
-							<form class="search-block">
-								<div class="input-group"><input class="search-block__input form-control" placeholder="Поиск" type="text"/>
-									<button class="btn" type="button"> 
-										<svg class="icon icon-search ">
-											<use xlink:href="img/svg/sprite.svg#search"></use>
-										</svg>
-									</button>
-								</div>
-							</form>
-						</div>
-						<div class="col-auto"><a class="basket-btn" href="#"><span class="basket-btn__icon-wrap">
-							<svg class="icon icon-basket ">
-								<use xlink:href="img/svg/sprite.svg#basket"></use>
-							</svg><span class="basket-btn__count">0 </span></span><span class="basket-btn__price">0р</span></a>
-						</div>
-						<div class="col-lg order-lg-first">
-							<div class="menu-mobile menu-mobile--js nav-wrap">
-								<div class="menu-mobile__inner">
-									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none">
-										<svg class="icon icon-menu ">
-											<use xlink:href="img/svg/sprite.svg#menu"></use>
-										</svg>
-									</div><span></span>
-									<ul class="navMenu"> 
-										<li><a href="#">Главная</a></li>
-										<li class="has-children"><a class="btn" href="#">  Каталог</a>
-											<ul>
-												<li><a href="#">Теплоизоляция</a></li>
-												<li class="has-children-inner"><a href="#">Паро-гидро-изоляция</a>
-													<ul>
-														<li><a href="#"> Пароизоляционные плёнки</a></li>
-														<li><a href="#"> Гидро-ветроизоляционные плёнки</a></li>
-														<li><a href="#"> Дренажные мембраны</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-													</ul>
-												</li>
-												<li class="has-children-inner"><a href="#">Битумные материалы</a>
-													<ul>
-														<li><a href="#"> Пароизоляционные плёнки</a></li>
-														<li><a href="#"> Гидро-ветроизоляционные плёнки</a></li>
-														<li><a href="#"> Дренажные мембраны</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-														<li><a href="#"> Комплектующие</a></li>
-													</ul>
-												</li>
-												<li><a href="#">Сухие строительные смеси</a></li>
-												<li><a href="#">Древесно-плитные материалы</a></li>
-												<li><a href="#">Гипсокартон и комплектующие</a></li>
-												<li><a href="#">Прочие товары</a></li>
-												<li><a href="#">Метизная продукция</a></li>
-												<li><a href="#">Кровельные материалы</a></li>
-											</ul>
-										</li>
-										<li><a href="#"> Оплата</a></li>
-										<li><a href="#">Доставка</a></li>
-										<li><a href="#">Статьи</a></li>
-										<li><a href="#"> Новости </a></li>
-										<li><a href="#">Контакты </a></li>
-										<li><a href="#">О магазине </a></li>
-										<li><a class="btn" href="#">Оптовикам</a></li>
-									</ul>
-									<div class="d-lg-none ml-3 mt-3">
-										<button class="btn btn-light" type="button">Заявка на расчет</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- end top-nav-->
-		</header>
+		</div>
+		<!-- end top-nav-->
 		<!-- start headerBlock-->
 		<div class="headerBlock section" id="headerBlock">
 			<div class="container">
